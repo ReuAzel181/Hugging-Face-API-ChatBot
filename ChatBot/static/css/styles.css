@@ -1,0 +1,203 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* For positioning images */
+    overflow: hidden; /* Ensure images don't overflow the viewport */
+    animation: gradientAnimation 10s ease infinite; /* Animation */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+    }
+    50% {
+        background: linear-gradient(135deg, #fc5c7d, #6a82fb);
+    }
+    100% {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+    }
+}
+
+.meme {
+    position: absolute;
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    opacity: 0.8;
+    z-index: 1;
+    pointer-events: none; /* Ensures images do not interfere with clicks */
+    animation: moveImage 10s linear infinite; /* Animation for images */
+}
+
+@keyframes moveImage {
+    0% {
+        transform: translate(-150%, -150%);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(50%, 50%);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(150%, 150%);
+        opacity: 0;
+    }
+}
+
+/* Existing CSS styles */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px; /* Adjusted for a more compact look */
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures animations don't overflow */
+}
+
+header {
+    background-color: #004c8c; /* Darker blue */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out; /* Fade-in animation for header */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 400px; /* Adjusted for a more compact look */
+    position: relative; /* For animation of messages */
+}
+
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-top: 1px solid #e1e1e1;
+    background-color: #f8f9fa;
+    padding: 10px; /* Added padding for better spacing */
+    position: relative; /* For animation of messages */
+}
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between messages */
+    padding: 10px;
+    animation: slideIn 1s ease-out; /* Slide-in animation for messages */
+}
+
+.message {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #e9ecef;
+    max-width: 80%;
+    word-wrap: break-word; /* Ensures long words break correctly */
+    opacity: 0; /* Start hidden for fade-in animation */
+    animation: fadeInUp 0.5s ease-out forwards; /* Fade-in and slide-up animation */
+}
+
+.message.bot {
+    background-color: #cce5ff; /* Light blue for bot messages */
+    align-self: flex-start;
+}
+
+.message.user {
+    background-color: #d4edda; /* Light green for user messages */
+    align-self: flex-end;
+}
+
+.input-container {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #e1e1e1;
+    background: #ffffff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the input area */
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+input[type="text"]:focus {
+    border-color: #004c8c; /* Highlight border color on focus */
+}
+
+button {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #004c8c; /* Darker blue */
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #003d7a;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+footer {
+    background-color: #004c8c; /* Darker blue */
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+    font-size: 14px;
+    animation: fadeIn 1s ease-out; /* Fade-in animation for footer */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
