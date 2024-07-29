@@ -30,9 +30,9 @@ body {
     width: 100px; /* Adjust size as needed */
     height: auto;
     opacity: 0.8;
-    z-index: 1;
+    z-index: -1;
     pointer-events: none; /* Ensures images do not interfere with clicks */
-    animation: moveImage 10s linear infinite; /* Animation for images */
+    animation: moveImage 10s infinite; /* Animation should be applied here */
 }
 
 @keyframes moveImage {

@@ -13,29 +13,32 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add more paths to your meme images
     ];
 
-    for (let i = 0; i < numberOfImages; i++) {
+    function getRandomImage() {
+        return images[Math.floor(Math.random() * images.length)];
+    }
+
+    function createAndAnimateImage() {
         const img = document.createElement('img');
-        // Check if images array is not empty
-        if (images.length > 0) {
-            // Select a random image from the array
-            const randomImage = images[Math.floor(Math.random() * images.length)];
-            img.src = randomImage;
-        } else {
-            console.error('No images found in the array.');
-            continue;
-        }
-        
+        img.src = getRandomImage();
         img.className = 'meme';
         img.style.top = `${Math.random() * 100}vh`;
         img.style.left = `${Math.random() * 100}vw`;
         img.style.width = `${Math.random() * 150 + 50}px`; // Random width between 50px and 200px
 
+        // Set the animation
+        img.style.animation = 'moveImage 10s infinite'; // Adjust duration as needed
+
         // Debug output
         console.log(`Adding image: ${img.src}`);
 
         document.body.appendChild(img);
-    
     }
+
+    // Create and animate images
+    for (let i = 0; i < numberOfImages; i++) {
+        createAndAnimateImage();
+    }
+
     // Function to handle sending the message
     function sendMessage() {
         const message = messageInput.value;
