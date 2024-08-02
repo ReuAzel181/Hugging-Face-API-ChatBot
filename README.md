@@ -38,9 +38,17 @@ Go to http://127.0.0.1:5000 to interact with the chatbot.
     app.py
     requirements.txt
     
-Contributing
-Feel free to fork the repository and submit pull requests. If you have any suggestions or improvements, please open an issue or create a pull request.
+**Contributing**
+  - Feel free to contribute to the project by submitting issues or pull requests. We welcome any improvements or bug fixes!
 
-License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+**License**
+  - This project is licensed under the MIT License. See the LICENSE file for more details.
 
+### Contact
+    For any questions or feedback, please reach out to:
+
+**Author:** ReuAzel181
+
+**Email:** reyuasel@gmail.com 
+
+- Thank you for checking out the 2D Game Platformer project!
