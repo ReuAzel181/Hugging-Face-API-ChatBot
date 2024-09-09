@@ -1,6 +1,6 @@
 # ChatBot Using Hugging Face API
 
-This repository contains a simple chatbot application that utilizes the Hugging Face API to generate responses. It’s designed to demonstrate basic chatbot functionality and is a great starting point for exploring natural language processing and chatbot development.
+This repository contains a simple chatbot application that utilizes the Hugging Face API to generate responses. It’s designed to demonstrate basic chatbot functionality and is a great starting point for exploring natural language processing and chatbot development. I am just exploring the chatbot, and it often gives nonsense responses.
 
 
 ![UI](https://github.com/ReuAzel181/ChatBot-using-Hugging-Face-API/blob/2c1ef3c7d7020dc40c29a4b019ad87dfdbfd63d4/Interface.png)
